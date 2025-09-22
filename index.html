@@ -16,13 +16,13 @@
     .wrap{max-width:1200px;margin-inline:auto;padding:clamp(16px,4vw,40px)}
     header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--ring)}
     nav{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:.75rem 0}
-    nav .brand{display:flex;gap:.6rem;align-items:center;font-weight:600;font-size:1.05rem}
-    nav .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--accent)}
+    nav .brand{display:flex;gap:.6rem;align-items:center;font-weight:700;font-size:1.15rem;letter-spacing:-.01em;color:var(--accent)}
+    nav .brand .dot{width:12px;height:12px;border-radius:999px;background:var(--accent)}
     .tabs a{display:inline-flex;padding:.4rem .9rem;border-radius:8px;font-weight:500;color:var(--ink)}
     .tabs a:hover{background:#f9f9f9}
     .hero{padding:clamp(40px,8vw,80px) 0;text-align:center}
-    .hero h1{font-size:clamp(28px,5vw,52px);font-weight:600;margin-bottom:1rem;letter-spacing:-.015em}
-    .hero p{color:var(--muted);max-width:70ch;margin:0 auto;font-size:1.1rem}
+    .hero h1{font-size:clamp(32px,5.5vw,56px);font-weight:700;margin-bottom:1rem;letter-spacing:-.02em;color:var(--accent)}
+    .hero p{color:var(--muted);max-width:70ch;margin:0 auto;font-size:1.15rem}
     .card{background:var(--card);border-radius:14px;border:1px solid var(--ring);box-shadow:0 1px 3px rgba(0,0,0,.05);margin-top:2.5rem}
     .pad{padding:clamp(20px,2vw,32px)}
     h2{font-size:1.6rem;font-weight:600;margin-bottom:1rem;letter-spacing:-.01em}
@@ -50,11 +50,6 @@
     .btn-group{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:1.2rem}
     .btn-link{display:inline-block;background:#0071e3;color:#fff;font-weight:600;padding:12px 24px;border-radius:10px;text-decoration:none;transition:background .2s}
     .btn-link:hover{background:#005bb5}
-      /* Animación suave para secciones */
-    @keyframes fadeSlideIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
-    details[open] .pad{animation:fadeSlideIn .26s ease}
-    summary{transition:background .2s}
-    summary:hover{background:#f3f4f6}
   </style>
 </head>
 <body>
@@ -81,20 +76,6 @@
       <div class="chips">
         <span class="chip">Proyecto FONTAGRO</span>
         <span class="chip">UNA · FHIA · Fundación Juana de Vega</span>
-      </div>
-    </section>
-
-    <!-- Logos -->
-    <section class="card">
-      <div class="pad">
-        <h2>Organizaciones responsables</h2>
-        <div class="logos">
-          <img src="assets/fontagro-logo-300x160.png" alt="Logo FONTAGRO">
-          <img src="assets/LOGO IICA.png" alt="Logo IICA">
-          <img src="assets/logo@2x-white.webp" alt="Logo FHIA">
-          <img src="assets/LOGO UNA.png" alt="Logo UNA">
-          <img src="assets/logo FJDV.png" alt="Logo Fundación Juana de Vega">
-        </div>
       </div>
     </section>
 
@@ -185,21 +166,24 @@
         <p class="muted" style="margin-top:.6rem">Próximamente: fichas técnicas por territorio, protocolos y resultados.</p>
       </div>
     </details>
+
+    <!-- ORGANIZACIONES -->
+    <section class="card">
+      <div class="pad">
+        <h2>Organizaciones responsables</h2>
+        <div class="logos">
+          <img src="assets/LOGO IICA.png" alt="Logo IICA">
+          <img src="assets/fontagro-logo-300x160.png" alt="Logo FONTAGRO">
+          <img src="assets/LOGO UNA.png" alt="Logo UNA">
+          <img src="assets/logo@2x-white.webp" alt="Logo FHIA">
+          <img src="assets/logo FJDV.png" alt="Logo Fundación Juana de Vega">
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="wrap">© 2025 · Proyecto FONTAGRO — Universidad Nacional (UNA) · FHIA · Fundación Juana de Vega</div>
   </footer>
-  <script>
-    // Acordeón con cierre automático de otras secciones y scroll suave
-    const allDetails = Array.from(document.querySelectorAll('details'));
-    allDetails.forEach(d => d.addEventListener('toggle', () => {
-      if (d.open){
-        allDetails.forEach(o => { if (o!==d) o.open=false; });
-        // pequeño retraso para que se calcule el alto y luego hacer scroll
-        setTimeout(() => d.scrollIntoView({behavior:'smooth', block:'start'}), 80);
-      }
-    }));
-  </script>
 </body>
 </html>
