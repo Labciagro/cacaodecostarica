@@ -23,14 +23,15 @@
     .hero{padding:clamp(40px,8vw,80px) 0;text-align:center}
     .hero h1{font-size:clamp(28px,5vw,52px);font-weight:600;margin-bottom:1rem;letter-spacing:-.015em}
     .hero p{color:var(--muted);max-width:70ch;margin:0 auto;font-size:1.1rem}
-    .card{background:var(--card);border-radius:14px;border:1px solid var(--ring);box-shadow:0 1px 3px rgba(0,0,0,.05);margin-top:2rem}
+    .card{background:var(--card);border-radius:14px;border:1px solid var(--ring);box-shadow:0 1px 3px rgba(0,0,0,.05);margin-top:2.5rem}
     .pad{padding:clamp(20px,2vw,32px)}
     h2{font-size:1.6rem;font-weight:600;margin-bottom:1rem;letter-spacing:-.01em}
-    h3{font-size:1.25rem;margin:1.2rem 0 .6rem}
+    h3{font-size:1.25rem;margin:1.5rem 0 .75rem}
+    h4{font-size:1.1rem;margin:1.25rem 0 .5rem;font-weight:600;color:var(--ink)}
     p,li{font-size:1rem;color:var(--ink)}
     ul{padding-left:1.2rem}
     .grid{display:grid;gap:clamp(20px,3vw,28px)}
-    .schedule{display:grid;gap:12px;margin-top:1rem}
+    .schedule{display:grid;gap:14px;margin-top:1rem;margin-bottom:1.5rem}
     .slot{display:grid;gap:.5rem;border:1px solid var(--ring);border-radius:12px;background:#fafafa;padding:14px}
     @media(min-width:680px){.slot{grid-template-columns:140px 1fr}}
     .time{font-weight:600;color:var(--accent)}
@@ -42,10 +43,12 @@
     .chip{background:#f2f2f2;border:1px solid var(--ring);padding:.35rem .9rem;border-radius:999px;color:var(--ink);font-size:.9rem}
     .logos{display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;margin-top:1.5rem}
     .logos img{height:50px;width:auto;object-fit:contain;}
-    details{border:1px solid var(--ring);border-radius:12px;margin-top:1.5rem}
-    summary{cursor:pointer;padding:14px 18px;font-weight:600;background:#f9f9f9;border-radius:12px}
+    details{border:1px solid var(--ring);border-radius:12px;margin-top:2rem;padding-bottom:.5rem}
+    summary{cursor:pointer;padding:16px 20px;font-weight:600;background:#f9f9f9;border-radius:12px;font-size:1.1rem}
     details[open]{box-shadow:0 2px 6px rgba(0,0,0,.05)}
-    details .pad{padding:20px}
+    details .pad{padding:22px}
+    .btn-link{display:inline-block;background:#0071e3;color:#fff;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;margin-top:12px}
+    .btn-link + .btn-link{margin-left:10px}
   </style>
 </head>
 <body>
@@ -96,8 +99,8 @@
         <p>El cacao es un cultivo emblemático en la historia, la cultura y la economía de Mesoamérica. La región ha sido centro de domesticación y diversificación del <em>Theobroma cacao</em>, dando origen a variedades finas y de aroma reconocidas internacionalmente. Sin embargo, a pesar de esta riqueza biocultural y genética, la participación mesoamericana en el mercado global sigue siendo mínima.</p>
         <p>Las Indicaciones Geográficas (IG) se presentan como una herramienta estratégica para valorizar los cacaos diferenciados, proteger el patrimonio biocultural, impulsar el desarrollo socioeconómico y abrir oportunidades comerciales vinculadas a la calidad, el origen y el turismo.</p>
         <p>Este proyecto —coordinado por la UNA, en alianza con FHIA y la Fundación Juana de Vega, y con apoyo de FONTAGRO— promueve una hoja de ruta para diseñar y poner en marcha IGs de cacao en Costa Rica, articulando actores públicos, academia, productores, industria y comunidades.</p>
-        <p><a href="https://www.canva.com/design/DAGq5UyzZ3s/z3ekSTZdR69QZniwxniwVQ/view?utm_content=DAGq5UyzZ3s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2ab8d74cec" target="_blank" style="display:inline-block;background:#0071e3;color:#fff;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">📑 Ver presentación en Canva</a></p>
-        <p><a href="https://fontagro.org/es/proyectos/indicacionesgeograficas" target="_blank" style="display:inline-block;background:#0071e3;color:#fff;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">🌐 Página oficial del proyecto en FONTAGRO</a></p>
+        <a href="https://www.canva.com/design/DAGq5UyzZ3s/z3ekSTZdR69QZniwxniwVQ/view?utm_content=DAGq5UyzZ3s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2ab8d74cec" target="_blank" class="btn-link">📑 Ver presentación en Canva</a>
+        <a href="https://fontagro.org/es/proyectos/indicacionesgeograficas" target="_blank" class="btn-link">🌐 Página oficial del proyecto en FONTAGRO</a>
       </div>
     </details>
 
@@ -130,7 +133,7 @@
 
         <h4>Participación virtual</h4>
         <p class="muted">Para unirse al taller en modalidad virtual, use el siguiente enlace (se activará próximamente):</p>
-        <p><a href="#" target="_blank">🔗 Enlace de Zoom</a></p>
+        <a href="#" target="_blank" class="btn-link">🔗 Unirse vía Zoom</a>
       </div>
     </details>
 
